@@ -120,7 +120,7 @@ function renderStaticFallback() {
         {
             name: "Julian Ramos",
             role: "Ing. Sistemas y Soporte Web",
-            description: "Encargado de la infraestructura tecnológica, bases de datos (Supabase), y optimización de presencia digital de todo el equipo JACC SPORT.",
+            description: "Encargado de la infraestructura tecnológica y optimización de la presencia digital de todo el equipo JACC SPORT.",
             icon: "fa-laptop-code"
         }
     ];
