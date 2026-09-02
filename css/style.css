@@ -323,15 +323,16 @@ h3,
     min-width: 300px;
 }
 
-.placeholder-shield {
-    font-size: 12rem;
-    color: var(--primary-brand);
-    /* Glow via utility class .glow-effect */
+.fc-shield-img {
+    max-width: 100%;
+    width: 280px;
+    height: auto;
+    display: block;
     transition: transform 0.4s ease;
 }
 
-.placeholder-shield:hover {
-    transform: scale(1.1) rotate(5deg);
+.fc-shield-img:hover {
+    transform: scale(1.08) rotate(5deg);
 }
 
 /* Programs Section */
