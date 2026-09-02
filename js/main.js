@@ -3,8 +3,8 @@ const SUPABASE_URL = 'https://jawxvvskpnaveoggtssx.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_DEEda6s5Eg2QxA74L9z2KA_XvqLZVFh';
 
 // Evitamos inicializar Supabase si la librería CDN no cargó por fallas de conexión a internet del usuario, 
-// o si window.supabase no existe aún.
-const supabase = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+// o si window.supabase no existe aún. (Cambiamos el nombre a supabaseClient para no chocar con la librería base)
+const supabaseClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('JACC SPORT - Aplicación estática conectada exitosamente');
@@ -18,14 +18,14 @@ async function loadDynamicTeam() {
     if (!container) return;
 
     try {
-        if (!supabase) {
+        if (!supabaseClient) {
             console.warn('Librería Supabase no encontrada. Renderizando respaldo dinámico de emergencia.');
             renderStaticFallback();
             return;
         }
 
         // 1. Obtenemos los entrenadores directamente de la nube y los ordenamos (usamos la columna "orden" creada en el SQL)
-        const { data, error } = await supabase
+        const { data, error } = await supabaseClient
             .from('equipo')
             .select('*')
             .order('orden', { ascending: true }); // Ordena de menor a mayor (1 a 5)
