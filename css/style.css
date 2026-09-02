@@ -23,8 +23,21 @@
 body {
     background-color: #000;
     color: var(--text-primary);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Tipografía Premium Integrada */
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
     line-height: 1.6;
+}
+
+/* Reasignación de Pesos de Fuente a MODO AGRESIVO / INSTITUCIONAL (Oswald) */
+.section-title,
+h1,
+h2,
+h3,
+.slogan,
+.navbar a,
+.cta-button {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
 
 /* Global Video Background */
@@ -50,7 +63,7 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--primary-brand);
     margin-bottom: 3rem;
     text-transform: uppercase;
@@ -68,7 +81,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(5, 5, 5, 0.75);
+    background-color: rgba(5, 5, 5, 0.85);
     backdrop-filter: blur(10px);
     border-bottom: 2px solid var(--primary-brand);
     position: sticky;
@@ -78,7 +91,7 @@ body {
 
 .logo {
     max-width: 100%;
-    width: 220px;
+    width: 200px;
     height: auto;
     display: block;
 }
@@ -92,14 +105,15 @@ body {
 .navbar a {
     color: var(--text-primary);
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 500;
     text-transform: uppercase;
-    transition: color 0.3s;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 .navbar a:hover {
     color: var(--primary-brand);
+    text-shadow: 0 0 10px rgba(244, 197, 24, 0.6);
 }
 
 /* Header Socials */
@@ -123,15 +137,16 @@ body {
 }
 
 .header-social-btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.1);
 }
 
+/* Neo-Glowing Social Links */
 .header-social-btn.instagram {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 .header-social-btn.instagram:hover {
-    box-shadow: 0 5px 10px rgba(220, 39, 67, 0.4);
+    box-shadow: 0 0 15px #dc2743;
 }
 
 .header-social-btn.tiktok {
@@ -140,7 +155,7 @@ body {
 }
 
 .header-social-btn.tiktok:hover {
-    box-shadow: 0 5px 10px rgba(0, 242, 254, 0.3);
+    box-shadow: 0 0 15px #00f2fe;
     border-color: #00f2fe;
 }
 
@@ -149,7 +164,7 @@ body {
 }
 
 .header-social-btn.facebook:hover {
-    box-shadow: 0 5px 10px rgba(24, 119, 242, 0.4);
+    box-shadow: 0 0 15px var(--color-facebook);
 }
 
 .header-social-btn.whatsapp {
@@ -157,7 +172,7 @@ body {
 }
 
 .header-social-btn.whatsapp:hover {
-    box-shadow: 0 5px 10px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 0 15px var(--color-whatsapp);
 }
 
 .header-social-btn.email {
@@ -165,7 +180,58 @@ body {
 }
 
 .header-social-btn.email:hover {
-    box-shadow: 0 5px 10px rgba(212, 70, 56, 0.4);
+    box-shadow: 0 0 15px #D44638;
+}
+
+/* Botón Flotante Permanente WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 38px;
+    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Efectos Glow Esenciales */
+.glow-effect {
+    text-shadow: 0 0 35px var(--primary-brand);
+}
+
+.glow-text {
+    color: var(--primary-neon);
+    text-shadow: 0 0 15px rgba(57, 255, 20, 0.6);
 }
 
 /* Hero Section */
@@ -192,13 +258,13 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: var(--primary-brand);
 }
 
 .hero-content p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
     color: var(--text-secondary);
 }
@@ -208,16 +274,11 @@ body {
     font-weight: 500;
 }
 
-.hero-content .highlight strong {
-    color: var(--primary-neon);
-}
-
 .slogan {
     margin: 1rem 0;
-    font-size: 1.5rem;
-    font-style: italic;
+    font-size: 1.8rem;
     color: var(--primary-brand);
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 /* JACC SPORT FC Section */
@@ -265,12 +326,12 @@ body {
 .placeholder-shield {
     font-size: 12rem;
     color: var(--primary-brand);
-    text-shadow: 0 10px 30px rgba(244, 197, 24, 0.1);
+    /* Glow via utility class .glow-effect */
     transition: transform 0.4s ease;
 }
 
 .placeholder-shield:hover {
-    transform: scale(1.05) rotate(5deg);
+    transform: scale(1.1) rotate(5deg);
 }
 
 /* Programs Section */
@@ -295,9 +356,11 @@ body {
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
-.program-card:hover {
+/* Glow Upgrade para Hover */
+.program-card:hover,
+.team-member:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(244, 197, 24, 0.15);
+    box-shadow: 0 10px 40px rgba(244, 197, 24, 0.3);
     border-color: var(--primary-brand);
 }
 
@@ -348,16 +411,15 @@ body {
     transition: transform 0.3s, border-color 0.3s;
 }
 
-.team-member:hover {
-    transform: translateY(-8px);
-    border-color: var(--primary-brand);
-    box-shadow: 0 10px 20px rgba(244, 197, 24, 0.1);
-}
-
 .member-avatar {
     font-size: 4rem;
     color: var(--primary-brand);
     margin-bottom: 1rem;
+    transition: text-shadow 0.3s;
+}
+
+.team-member:hover .member-avatar {
+    text-shadow: 0 0 20px var(--primary-brand);
 }
 
 .member-avatar-img {
@@ -419,10 +481,6 @@ body {
     margin-bottom: 2rem !important;
 }
 
-.highlight-phrase strong {
-    color: var(--primary-neon);
-}
-
 .cta-button {
     display: inline-flex;
     align-items: center;
@@ -431,15 +489,14 @@ body {
     background-color: var(--primary-brand);
     color: #000;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     border-radius: 50px;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .cta-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 20px rgba(244, 197, 24, 0.4);
+    box-shadow: 0 5px 25px rgba(244, 197, 24, 0.6);
 }
 
 /* Footer */
@@ -478,11 +535,11 @@ body {
     }
 
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
         text-align: center;
     }
 

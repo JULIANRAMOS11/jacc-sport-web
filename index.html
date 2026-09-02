@@ -5,9 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JACC SPORT | Vive Bien • Entrena Mejor</title>
+
+    <!-- Google Fonts Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Archivo de Estilos Principal -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome para los iconos de redes sociales y servicios -->
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Animaciones AOS.js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- SDK de Cliente Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -20,13 +33,14 @@
         <source src="assets/video/video1.mp4" type="video/mp4">
     </video>
 
+    <!-- Header Transparente con Redes y Logo -->
     <header class="header">
-        <div class="logo-container">
+        <div class="logo-container" data-aos="fade-down" data-aos-duration="600">
             <a href="#inicio">
                 <img src="assets/logos/logo.png" alt="JACC SPORT Logo" class="logo">
             </a>
         </div>
-        <nav class="navbar">
+        <nav class="navbar" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#jacc-fc">FC</a></li>
@@ -36,7 +50,7 @@
             </ul>
         </nav>
 
-        <div class="header-socials">
+        <div class="header-socials" data-aos="fade-down" data-aos-duration="600" data-aos-delay="200">
             <a href="https://www.instagram.com/sportjacc?utm_source=qr&igsi=c3dsNTAwcW5ub3Ri" target="_blank"
                 class="header-social-btn instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@jacc.sport?_r=1&_t=ZS-99M4BcIIyZE" target="_blank"
@@ -53,13 +67,13 @@
     <main>
         <!-- Sección Hero -->
         <section id="inicio" class="hero">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="zoom-in" data-aos-duration="1000">
                 <h1>Tu Mejor Versión Comienza Aquí 🚀</h1>
                 <p>Nuestra mayor especialidad es el <strong>Entrenamiento Personalizado</strong> adaptado a ti. Ya sea
                     que busques dominar el balón, liberar estrés en el ring o ponerte en forma bailando, tenemos el plan
                     perfecto.</p>
-                <p class="highlight">Prueba nuestro método hoy mismo. ¡Agenda tu <strong>CLASE Y VALORACIÓN
-                        GRATIS</strong> y prepárate para los resultados!</p>
+                <p class="highlight">Prueba nuestro método hoy mismo. ¡Agenda tu <strong class="glow-text">CLASE Y
+                        VALORACIÓN GRATIS</strong> y prepárate para los resultados!</p>
                 <h2 class="slogan">VIVE BIEN • ENTRENA MEJOR ⚡</h2>
             </div>
         </section>
@@ -67,7 +81,7 @@
         <!-- Sección Escuela JACC FC -->
         <section id="jacc-fc" class="jacc-fc-section">
             <div class="container jacc-fc-wrapper">
-                <div class="jacc-fc-info">
+                <div class="jacc-fc-info" data-aos="fade-right">
                     <h2 class="section-title text-left">JACC SPORT FC ⚽</h2>
                     <h3>Nuestra Escuela de Formación</h3>
                     <p>En <strong>JACC SPORT FC</strong> no solo te enseñamos a jugar al fútbol y futsal; formamos
@@ -76,8 +90,9 @@
                         módulos de alto rendimiento competitivo. Únete a nuestra familia y defiende nuestro escudo en la
                         cancha.</p>
                 </div>
-                <div class="jacc-fc-image">
-                    <div class="placeholder-shield">
+                <div class="jacc-fc-image" data-aos="fade-left" data-aos-delay="200">
+                    <!-- Nuevo efecto Glow -->
+                    <div class="placeholder-shield glow-effect">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                 </div>
@@ -87,21 +102,21 @@
         <!-- Sección Programas & Entrenamiento -->
         <section id="programas" class="programs-section">
             <div class="container">
-                <h2 class="section-title">Entrenamiento Personalizado</h2>
+                <h2 class="section-title" data-aos="fade-up">Entrenamiento Personalizado</h2>
                 <div class="programs-grid">
-                    <div class="program-card">
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="program-icon"><i class="fas fa-mitten"></i></div>
                         <h3>Boxeo</h3>
                         <p>Clases guiadas uno a uno o grupales para mejorar tu técnica de golpeo, velocidad, resistencia
                             y reflejos como todo un campeón.</p>
                     </div>
-                    <div class="program-card">
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="program-icon"><i class="fas fa-music"></i></div>
                         <h3>Zumba</h3>
                         <p>Rutinas vibrantes para quemar calorías. Entrenarás al ritmo de la música en un ambiente
                             espectacular y motivador.</p>
                     </div>
-                    <div class="program-card">
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="program-icon"><i class="fas fa-dumbbell"></i></div>
                         <h3>Físico Integral</h3>
                         <p>Lleva tu cuerpo al siguiente nivel con planes totalmente personalizados de acuerdo a tus
@@ -114,34 +129,31 @@
         <!-- Sección Nuestro Equipo -->
         <section id="equipo" class="team-section">
             <div class="container">
-                <h2 class="section-title">Nuestro Equipo</h2>
-                <p class="section-subtitle">Profesionales dedicados a sacar lo mejor de ti.</p>
+                <h2 class="section-title" data-aos="fade-up">Nuestro Equipo</h2>
+                <p class="section-subtitle" data-aos="fade-up">Profesionales dedicados a sacar lo mejor de ti.</p>
 
-                <!-- ESTE CONTENEDOR ES POBLADO DINÁMICAMENTE POR js/main.js -->
-                <div class="team-grid" id="team-container">
-                    <!-- Javascript insertará las tarjetas de los entrenadores aquí -->
+                <!-- JS se encarga del contenido dinamico y hereda el trigger data-aos global del grid de abajo -->
+                <div class="team-grid" id="team-container" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Insertado con JS/Supabase -->
                 </div>
-
             </div>
         </section>
 
         <!-- Sección Horarios y Contacto -->
         <section id="horarios" class="schedules-section">
             <div class="container">
-                <h2 class="section-title">Da el Primer Paso</h2>
-                <div class="schedules-content">
+                <h2 class="section-title" data-aos="zoom-in">Da el Primer Paso</h2>
+                <div class="schedules-content" data-aos="fade-up" data-aos-delay="100">
                     <p>Escríbenos a través de redes sociales, WhatsApp o correo electrónico
                         ('jaccsportcajica@gmail.com'). Aparta tu lugar en los entrenamientos personalizados o tu
                         matrícula en JACC SPORT FC.</p>
-                    <p class="highlight-phrase">¡Recuerda solicitar tu clase de prueba y valoración totalmente
-                        <strong>GRATIS</strong>!
-                    </p>
+                    <p class="highlight-phrase" data-aos="flip-up" data-aos-delay="300">¡Recuerda solicitar tu clase de
+                        prueba y valoración totalmente <strong class="glow-text">GRATIS</strong>!</p>
 
                     <a href="https://wa.me/573161089472?text=Hola,%20quiero%20agendar%20mi%20clase%20y%20valoraci%C3%B3n%20GRATIS%20en%20JACC%20SPORT"
                         class="cta-button" target="_blank">
                         <i class="fab fa-whatsapp"></i> Agendar por WhatsApp
                     </a>
-
                 </div>
             </div>
         </section>
@@ -152,7 +164,24 @@
         <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #555;">jaccsportcajica@gmail.com</p>
     </footer>
 
+    <!-- BOTÓN MAGNÉTICO DE WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/573161089472?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20agendar%20una%20clase"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Supabase Core y Logica base -->
     <script src="js/main.js"></script>
+
+    <!-- Activar Módulo Visual AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // Carga duradera a 800ms
+            once: true, // Se reproduce solo una vez cuando el usuario baja la rueda para ahorrar CPU
+            offset: 100 // Detecta 100 pixeles de margen antes del scroll
+        });
+    </script>
 </body>
 
 </html>
