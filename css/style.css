@@ -332,7 +332,8 @@ h3,
 }
 
 .fc-shield-img:hover {
-    transform: scale(1.08) rotate(5deg);
+    transform: scale(1.08);
+    /* Removida la rotación para evitar que se atasque al tocar en el celular */
 }
 
 /* Programs Section */
